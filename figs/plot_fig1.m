@@ -60,7 +60,7 @@ set(c,'ticks',[-1:1:1])
 axis([min(x),max(x),min(y),max(y)])
 daspect([1 1 1]); set(ax,'visible','off');
 ntitle('2011-2020','location','se','fontsize',8);
-ntitle('a','location','nw');
+ntitle('a','location','nw','fontsize',10,'fontweight','bold');
 
 % panel b May - August average dhdt
 hapos = get(ha(2),'position');
@@ -88,7 +88,7 @@ set(c,'ticks',[-3:3:3])
 axis([min(x),max(x),min(y),max(y)])
 daspect([1 1 1]); set(ax,'visible','off');
 ntitle('May-August','location','se','fontsize',8);
-ntitle('b','location','nw');
+ntitle('b','location','nw','fontsize',10,'fontweight','bold');
 
 % panel c September - April dhdt
 hapos = get(ha(3),'position');
@@ -113,7 +113,7 @@ set(c,'ticks',[-3:3:3])
 axis([min(x),max(x),min(y),max(y)])
 daspect([1 1 1]); set(ax,'visible','off');
 ntitle('September-April','location','se','fontsize',8);
-ntitle('c','location','nw');
+ntitle('c','location','nw','fontsize',10,'fontweight','bold');
 
 set(gcf,'color','w','InvertHardCopy', 'off');
 
