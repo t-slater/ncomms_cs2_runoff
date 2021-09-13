@@ -1,12 +1,7 @@
-#######################
+%%%%%%%%%%%%%%%%%%%%%%%
 % Produce seasonal elevation change time series from CryoSat-2 plane fit data in the Greenland Ice Sheet Ablation Zone
 % Compare to equivalent time series derived from firn modelling
-#######################
-
-
-% Define summer as CryoSat-2 data points inclusive of May 1st - August 31st
-summer_start = tn_cs(2:6:end); summer_start(5) = summer_start(5) - 10/365.25;
-summer_end = tn_cs(4:6:end);
+%%%%%%%%%%%%%%%%%%%%%%%
 
 %% initialise
 close all; clear;
@@ -22,7 +17,7 @@ plot_level = 0;
 disp('loading plane fit data...')
 disp('loading baseline d data...')
 load('/Volumes/eartsl/gris_smb/surfacefit_cs2_greenland_5km_lrmsin_cycle1_cycle122_cumul_dz_stack_60_day.mat','cs_cumdz_stack','gridx','gridy','mean_t','ts_midpt_sampling_vec','ts_vec_out') % baseline d
-
+% clear up time vector
 t_cs = ts_vec_out; clear ts_vec_out
 % mask to 2011 onwards
 tr = t_cs<2011;
@@ -53,7 +48,6 @@ clearvars icx icy icxgl icygl
 
 % load basin mask
 load('/Volumes/eartsl/gris_smb/zmask_gris.mat','zmask_gris');
-
 
 %  mask racmo to cryosat observed areas
 fdm_cumdz_stack_m = fdm_cumdz_stack;
@@ -124,7 +118,9 @@ end
 
 %% 3. seasonal changes in elevation
 %% 3.1 derive seasonal changes
-
+% Define summer as CryoSat-2 data points inclusive of May 1st - August 31st
+summer_start = tn_cs(2:6:end);
+summer_end = tn_cs(4:6:end);
 % 3.1.1 ablation zone
 disp('computing seasonal elevation changes across ablation zone')
 % initalise

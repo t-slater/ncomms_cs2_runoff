@@ -100,38 +100,38 @@ for i = 1:8
         p1 = plot(cryosat_may_aug_dh_zwallybasins(i,1:6),imau_fdm_may_aug_dh_zwallybasins(i,:),'o','color',cmapg(i,:),'markersize',2.5);
         plot(cryosat_sep_apr_dh_zwallybasins(i,1:5),imau_fdm_sep_apr_dh_zwallybasins(i,:),'o','color',cmapg(i,:),'markersize',2.5);
     end
-    
+
     if i == 2
         p2 = plot(cryosat_may_aug_dh_zwallybasins(i,1:6),imau_fdm_may_aug_dh_zwallybasins(i,:),'s','color',cmapg(i,:),'markersize',2.5);
         plot(cryosat_sep_apr_dh_zwallybasins(i,1:5),imau_fdm_sep_apr_dh_zwallybasins(i,:),'s','color',cmapg(i,:),'markersize',2.5);
     end
-    
+
     if i == 3
         p3 = plot(cryosat_may_aug_dh_zwallybasins(i,1:6),imau_fdm_may_aug_dh_zwallybasins(i,:),'^','color',cmapg(i,:),'markersize',2.5);
         plot(cryosat_sep_apr_dh_zwallybasins(i,1:5),imau_fdm_sep_apr_dh_zwallybasins(i,:),'^','color',cmapg(i,:),'markersize',2.5);
     end
-    
+
     if i == 4
         scatter(cryosat_may_aug_dh_zwallybasins(i,1:6),imau_fdm_may_aug_dh_zwallybasins(i,:),7,'d','filled','markerfacecolor',cmapg(i,:),'markerfacealpha',.3);
         scatter(cryosat_sep_apr_dh_zwallybasins(i,1:5),imau_fdm_sep_apr_dh_zwallybasins(i,:),7,'d','filled','markerfacecolor',cmapg(i,:),'markerfacealpha',.3);
         p4 = plot(NaN,NaN,'d','color',cmapg(i,:),'markersize',2.5,'markerfacecolor',cmapg(i,:))
     end
-    
+
     if i == 5
         p5 = plot(cryosat_may_aug_dh_zwallybasins(i,1:6),imau_fdm_may_aug_dh_zwallybasins(i,:),'v','color',cmapg(i,:),'markersize',2.5);
         plot(cryosat_sep_apr_dh_zwallybasins(i,1:5),imau_fdm_sep_apr_dh_zwallybasins(i,:),'v','color',cmapg(i,:),'markersize',2.5);
     end
-    
+
     if i == 6
         p6 = plot(cryosat_may_aug_dh_zwallybasins(i,1:6),imau_fdm_may_aug_dh_zwallybasins(i,:),'>','color',cmapg(i,:),'markersize',2.5);
         plot(cryosat_sep_apr_dh_zwallybasins(i,1:5),imau_fdm_sep_apr_dh_zwallybasins(i,:),'>','color',cmapg(i,:),'markersize',2.5);
     end
-    
+
     if i == 7
         p7 = plot(cryosat_may_aug_dh_zwallybasins(i,1:6),imau_fdm_may_aug_dh_zwallybasins(i,:),'<','color',cmapg(i,:),'markersize',2.5);
         plot(cryosat_sep_apr_dh_zwallybasins(i,1:5),imau_fdm_sep_apr_dh_zwallybasins(i,:),'>','color',cmapg(i,:),'markersize',2.5);
     end
-    
+
     if i == 8
         p8 = plot(cryosat_may_aug_dh_zwallybasins(i,1:6),imau_fdm_may_aug_dh_zwallybasins(i,:),'x','color',cmapg(i,:),'markersize',4);
         plot(cryosat_sep_apr_dh_zwallybasins(i,1:5),imau_fdm_sep_apr_dh_zwallybasins(i,:),'x','color',cmapg(i,:),'markersize',4);
@@ -162,11 +162,4 @@ ntitle('d','location','nw','fontweight','bold','fontsize',6)
 ntitle({'RMS = 29 cm',''},'location','se','color',rgb('ocean blue'),'fontsize',6)
 ntitle({'RMS = 18 cm'},'location','se','color',rgb('light teal'),'fontsize',6)
 
-set(gcf,'color','w','InvertHardCopy', 'off');
-
 return % manually adjust legend position
-
-set(fig,'PaperOrientation','landscape');
-set(fig,'PaperUnits','centimeters');
-set(fig,'PaperSize',[88 88]/10)
-print('/Users/thomas/OneDrive - University of Leeds/manuscripts/gris_runoff/accept_in_principle/vector_figs/fig3.pdf','-painters','-dpdf');

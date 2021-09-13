@@ -85,13 +85,3 @@ text(-1.3e5,-3.5e6,'5','color','k','fontsize',8);
 text(-6.5e5,-2.7e6,'6','color','k','fontsize',8);
 text(-6e5,-2.2e6,'7','color','k','fontsize',8);
 text(-6e5,-1.7e6,'8','color','k','fontsize',8);
-
-set(gcf,'color','w','InvertHardCopy', 'off');
-
-set(fig,'PaperOrientation','landscape');
-set(fig,'PaperUnits','centimeters');
-set(fig,'PaperSize',[180 90]/10)
-print('/Users/thomas/OneDrive - University of Leeds/manuscripts/gris_runoff/accept_in_principle/vector_figs/fig2.pdf','-painters','-dpdf');
-
-close
-clearvars fig ha

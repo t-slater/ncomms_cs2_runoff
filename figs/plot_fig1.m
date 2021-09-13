@@ -114,13 +114,3 @@ axis([min(x),max(x),min(y),max(y)])
 daspect([1 1 1]); set(ax,'visible','off');
 ntitle('September-April','location','se','fontsize',8);
 ntitle('c','location','nw','fontsize',10,'fontweight','bold');
-
-set(gcf,'color','w','InvertHardCopy', 'off');
-
-set(fig,'PaperOrientation','landscape');
-set(fig,'PaperUnits','centimeters');
-set(fig,'PaperSize',[180 100]/10)
-print('/Users/thomas/OneDrive - University of Leeds/manuscripts/gris_runoff/accept_in_principle/vector_figs/fig1.pdf','-painters','-dpdf');
-
-close
-clearvars fig ha

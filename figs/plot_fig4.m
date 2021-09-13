@@ -139,12 +139,3 @@ title(c,'(m)','fontsize',6);
 %c.Label.Position(2) = 1.5;
 set(axc,'visible','off');
 cbarrow('down')
-set(gcf,'color','w','InvertHardCopy', 'off');
-
-set(fig,'PaperOrientation','landscape');
-set(fig,'PaperUnits','centimeters');
-set(fig,'PaperSize',[180 73]/10)
-print('/Users/thomas/OneDrive - University of Leeds/manuscripts/gris_runoff/accept_in_principle/vector_figs/fig4.pdf','-painters','-dpdf','-bestfit');
-
-close
-clearvars fig ha
